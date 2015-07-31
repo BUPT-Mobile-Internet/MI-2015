@@ -1,0 +1,48 @@
+#menuhead{
+height:44px;
+background-color:B1191A;
+line-height:44px;
+color:white;
+}
+#menubody{
+background-color:#C81623;
+}
+#menu{
+width:200px;
+float: left;
+}
+#menubody div:{
+height:31px;
+}
+#menubody div:hover{
+background:white;
+}
+div{
+text-indent:10px;
+line-height:31px;
+ 
+}
+i{
+padding-right:3px;
+float:right;
+font: 400 9px/14px consolas;
+line-height: 31px;
+}
+#menucontent{
+	margin-left:200px;
+	height:300px;
+        width:800px;
+	background: #C2B7B7;
+	position:relative;
+}
+.menuoptions{
+	float:left;
+	margin:0 16px 0 16px;
+
+}
+.menuoptions a{
+	text-decoration: none;
+	display: block;
+	margin:0;
+	color:white;
+}

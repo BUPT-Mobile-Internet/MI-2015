@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel = "stylesheet" type = "text/css" href="salon.css">
+        <script type="text/javascript" src = "../js/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src = "app.js"></script>
+        <title>线下沙龙活动</title>
+        <script>
+                function navigate(){
+                        window.location.href = "map.html";
+                        console.log(1);
+                }
+        </script>
+</head>
+<body>
+        <img width="100%" height="100%" src="../image/clouds.gif">
+	<div style = "position:absolute;top:0;width:40%;left:30%">
+        <div id = "header" style="background:rgb(130, 217, 234);height:80px">
+		<div id ="title1" style ="height:50px;margin:0;padding:0;line-height:50px;font-size:40px;text-align:center"><p style="margin:0">线下沙龙活动</p></div>
+        <div style="background:#F5F2F2">
+        <img  alt=“良好的线下沙龙环境” style = "width:100%"src="../image/01-1.jpg" id = "lamp">
+        <h1>近期活动主题</h1>
+        <ul>
+        <li>互联网前端学习经验分享 7.18 18:00</li>
+        <li>互联网后端学习经验分享 7.21 18:00</li>
+        <li>互联网行业的发展前景 7.25 18:00</li>
+        <li>BAT大公司or创业型小公司 7.26 18:00</li>
+        <li>互联网职业生涯规划 7.30 18:00</li>
+        </ul>
+        <h1>线下活动大本营</h1>
+        <button type="button" onclick="navigate()">查看地图</button>
+        </div>	
+</body>
+</html>

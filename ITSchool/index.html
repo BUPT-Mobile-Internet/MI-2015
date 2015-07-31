@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<link  rel ="stylesheet" type = "text/css" href = "index.css"><!--用css给网页布局，否则网页中的文字和图片顺序排列-->
+<title>厘米IT学院</title><!--网页标签-->
+<script type ="text/javascript" src = "js/jquery-1.11.2.js"></script><!--链接到jquery库-->
+<script type ="text/javascript" src="js/index.js"></script> <!--链接到javascript-->
+</head>
+
+<body onresize="resizeFont()">
+<div class = "bg">
+<image width = "100%" height = "100%" src="image/clouds.gif"></image><!--背景蓝天图片-->
+<div class = "wrapper">
+<div class = "sign">
+<image src="image/logo.png" width = "100%" height ="100%"></image> <!--logo图片-->
+</div>
+
+<div class="nav">
+<ul>
+<li><a class = "navitem" href ="#">首页</a></li>
+<li><a class = "navitem" href ="lesson/lesson.html">在线课程</a></li>
+<li><a class = "navitem" href ="salon/salon.html">线下沙龙</a></li>
+<li><a class = "navitem" href ="http://www.w3school.com.cn">基础知识</a></li>
+<li><a class = "navitem" href ="#">讨论社区</a></li>
+<li><a class = "navitem" href ="#">作品展示</a></li>
+<li><a class = "navitem" href ="#">行业动态</a></li>
+<li><a class = "navitem" href ="#">官方微博</a></li>
+</ul>
+</div>
+ 
+ <!--主页大图-->
+<image id = "displayer" src ="image/banner.jpg" width="100%" height ="400px"  ></image>
+<div class = "clear"></div>
+<div id = "bttnwr">
+<div >1</div>
+<div >2</div>
+<div >3</div>
+</div>
+
+
+<div class = "leftContent">
+
+<!--前端 后端 基础知识学习 选项-->
+<div class = "floatopt">
+<div id = "floatopt1" style="cursor:pointer;"><div></div>前端</div>
+<div id = "floatopt2" style="cursor:pointer;"><div></div>后端</div>
+
+</div>
+
+<!--web前端部分图片加文字-->
+<div  id = "floatblock1" >
+<image src="image/articleBanner.jpg" width="100%"></image>
+<h1>Web前端开发工程师好找工作吗？</h1>
+<p>据09年全国Web前端开发行业调查统计显示，09年大型企业对于Web前端开发人才需求紧缺。 Web前端开发目前
+是一种新兴职业，专业的前端开发人员绝大部分存在于大型企业中，如腾讯、百度等，换种说法就是：选择从事
+Web前端开发就等于你的一只脚已经迈进了腾讯、百度等高薪企业。</p>
+ <p>随着Web2.0的大潮席卷而来，2010年互联网发展速度空前，互联网向标准化、专业化、精细化方向发展，导致
+ Web开发职位进一步细分，Web 前端开发工程师、Web页面重构师等这些高薪职业相继诞生。如今流行的浏览器有十
+ 几种，不同的浏览器对页面的解析不同，导致相同的页面在不同的浏览器内显示效果不同，不能兼容多种浏览器，
+ 用户体验降低，搜索引擎抓取率低，加载速度慢等影响页面整体质量的因素产生，所以对页面制作要求越来越高，
+ 致使许多公司急需提供制作标准页面服务的技术人员。</p>
+ <p>现在YAHOO、MSN等国际门户网站，网易、新浪等国内门户网站，和主流的Web2.0网站，均采用xHTML(DIV)＋CSS
+ 的框架模式，更加印证了xHTML(DIV)＋CSS是大势所趋。</p>
+
+    <p>正因为如此Web前端开发人员成为市场上紧缺的人才，同时也成为一个新兴的高薪职业。</p>	
+</div>
+
+
+<!--web后端部分同一张图片加文字-->
+<div id = "floatblock2" style = "display:none" >
+<image src="image/articleBanner.jpg" width="100%"></image>
+<h1>关于web后端</h1>
+<p>Web后端工程师，当然，我认为很少有这种叫法的。区别于前端开发工程师，重点是对业务逻辑及数据的处理，使用的语言主要是PHP,Java,ASP.NET,Python, Ruby等。相比较前端，
+后端的发展比较成熟，针对不同的语言，有很多成熟的解决方案，比方说MVC，Struts等。</p>
+ <p>全球前100万的站点中，有70%左右的站点用PHP开发，它与Linux/Mysql/Apache/Nginx等组成黄金搭档，无论从成本投入和开发周期的考虑，PHP都是一个不错的选择。
+PHP可用在网站开发，API接口开发，服务器端开发，广告系统开发，内部OA系统开发，移动端后台开发，游戏开发等，特别在移动互联网发展迅猛的今天，PHP借机上位
+，重回一线开发语言行列。</p>
+ <p>一线公司基本以数字厂（360），狼厂（Baidu），鹅厂（Tencent），猫厂（Alibaba）
+ ，小米，狗厂（搜狗），猎豹等代表，薪资但是在如今人才为王的市场状况下，部分融资不错的发展型公司也都纷纷打出非常具有竞争力的薪资和各种优厚的福利，比如像某团，某集，
+ 某滴等，包括现在热门的的互联网金融公司。当然也有少数土豪公司，只要人好，天黑都不怕！。</p>
+
+    <p>选择什么样的平台很关键，大平台技术好，福利高，有保障，但是空间小，像螺丝钉。发展型公司氛围好，产品前景不错，空间大，但是风险大，选择各有利弊，结合自己不同阶段的追求，才能做出最适合自己的选择。</p>	
+</div>
+</div>
+
+
+
+<div class = "rightContent">
+<p class = title><span>前端作品<span><p>
+<ul>
+<li><a href="#">可弹出式导航框<a></li>
+<li><a href="demoWork/Demo2/todolist.html">todolistapp</a></li>
+</ul>
+
+
+<p class = title><span>职业生涯<span><p>
+<ul>
+<li>Web前端开发工程师需要掌握哪些核心技能？</li>
+<li>我是程序员，有必要进行web前端开发的学习吗</li>
+<li>我是网站美工，目前发展遇到瓶颈，该如何解决？</li>
+<li>我适合从事web前端开发行业吗？</li>
+<li>Web前端工程师如何给自己定位？</li>
+<li>Web前端开发工程师好找工作吗？</li>
+</ul>
+</div>
+
+<!--尾页-->
+<div class = "clear"></div>
+<div class = "footer">
+<table class ="foottable">
+<tr>
+<td><a href ="#">关于W3CStudy | </a></td>
+<td><a href ="#"> 广告服务 |</a></td>
+<td><a href ="#">提交问题 |</a></td>
+<td><a href ="#">版权声明 |</a></td>
+<td><a href ="#"> 关于隐私 |</a></td>
+<td><a href ="#">联系我们 |</a></td>
+<td><a href ="#">合作伙伴</a></td>
+</tr>
+</table>
+<p style="text-align:center;color:white">京ICP备10055601号  All rights(C)2008-2010 Reserved</p>
+</div>
+</div>
+</div>
+</body>
+</html>
