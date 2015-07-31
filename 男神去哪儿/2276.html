@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>根据地址查询经纬度</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BD1ivpl9GfS0Vv185SB8s7xs">
+   </script>
+</head>
+<body style="background:#f5f1e6">
+    <div style="width:730px;margin:auto;">
+        要查询的地址：<input id="text_" type="text"  style="margin-right:100px;"/>
+        查询结果(经纬度)：<input id="result_" type="text" />
+
+        <div id="container" 
+            style="position: absolute;
+                margin-top:20px;
+                width: 730px; 
+                height: 590px; 
+                top: 50; 
+                border: 1px solid gray;
+                overflow:hidden;">
+        </div>
+
+	<button id="setPanoramaByLocation" style="position: absolute;
+		margin-top:650px;
+
+		">
+
+
+	全景</button>
+
+	<div id="panorama" style="position: absolute;
+                margin-top:670px;
+                width: 730px;
+                height: 590px; 
+                top: 50; 
+                border: 1px solid gray;
+                overflow:hidden;">
+
+    </div>
+	<div id="result" style="position: absolute;
+                margin-top:670px;
+                width: 730px; 
+                height: 590px; 
+                top: 50; 
+                border: 1px solid gray;
+                overflow:hidden;">
+		
+	</div>
+    </div>
+</body>
+<script type="text/javascript">
+    function GetQueryString(name)
+    {
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)
+    return  unescape(r[2]);
+    return null;
+    }
+    function addEvent(ele, event_name, func){
+    if(window.attachEvent){
+    ele.attachEvent(event_name, func);
+    }
+    else{
+    event_name = event_name.replace(/^on/, "");
+    ele.addEventListener(event_name, func, false);    //默认事件是冒泡
+    }
+    }
+
+    alert(GetQueryString("id"));
+
+    var addr=document.getElementById("text_");
+    addr.value=GetQueryString("id");
+
+    var map = new BMap.Map("container");
+    map.centerAndZoom("宁波", 12);
+    map.enableScrollWheelZoom();    //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+
+    map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
+    map.addControl(new BMap.OverviewMapControl()); //添加默认缩略地图控件
+    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT }));   //右下角，打开
+
+    var localSearch = new BMap.LocalSearch(map);
+    localSearch.enableAutoViewport(); //允许自动调节窗体大小
+    function searchByStationName() {
+    map.clearOverlays();//清空原来的标注
+    var keyword = document.getElementById("text_").value;
+    localSearch.setSearchCompleteCallback(function (searchResult) {
+    var poi = searchResult.getPoi(0);
+    document.getElementById("result_").value = poi.point.lng + "," + poi.point.lat;
+    map.centerAndZoom(poi.point, 13);
+    var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地方对应的经纬度
+    map.addOverlay(marker);
+    var content = document.getElementById("text_").value + "<br/><br/>经度：" + poi.point.lng + "<br/>纬度：" + poi.point.lat;
+    var infoWindow = new BMap.InfoWindow("<p style='font-size:14px;'>" + content + "</p>");
+    marker.addEventListener("click", function () { this.openInfoWindow(infoWindow); });
+    // marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    });
+    localSearch.search(keyword);
+    }
+    searchByStationName();
+</script>
+
+
+
+
+<script type="text/javascript"> 
+	var map2 = new BMap.Map('panorama');
+	map2.centerAndZoom(new BMap.Point(120.305456, 31.570037), 12);
+	map2.addTileLayer(new BMap.PanoramaCoverageLayer());
+
+	var panorama = new BMap.Panorama('panorama'); 
+	panorama.setPov({heading: -40, pitch: 6});
+	document.getElementById("setPanoramaByLocation").onclick = function(){ 
+		panorama.setPosition(new BMap.Point(120.320032, 31.589666)); //根据经纬度坐标展示全景图		
+	};
+	document.getElementById("setPanoramaById").onclick = function(){ 
+		panorama.setId('0100010000130501122416015Z1');//根据全景id展示全景图
+	};
+</script>
+</html>
