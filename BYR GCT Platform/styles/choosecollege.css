@@ -1,0 +1,170 @@
+BODY {
+	font-family : ºÚÌå;
+	FONT: 12px/1.6em Helvetica, Arial, sans-serif; 
+	COLOR: #000; 
+	BACKGROUND: #fff; 
+	text-align: center;
+	PADDING: 0px; 
+	MARGIN: 0px; 
+	min-width:900px;
+}
+
+.wrap {
+	MARGIN: auto;
+  	WIDTH: 98%;
+  	text-align: left;
+  	
+}
+
+.main {
+	background: url(images/background.jpg);
+	margin-top: 10px;
+}
+
+.choosecollegemain {
+	BACKGROUND: url(images/college2.jpg);
+	background-size:cover;
+	text-align: center;
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	height:500px;
+	
+}
+
+.dec {
+	BACKGROUND: url(images/college1.jpg);
+	background-size:cover;
+	text-align: center;
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:2px;
+	height:300px;
+}
+
+.chooseteachermain {
+	text-align: center;
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+	
+}
+
+.tableform {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+}
+
+.tableform tr {
+	width: 500px;
+
+}
+
+.tableform tr td {
+	height: 53px;
+	font-size:21px;
+	font-weight:bolder;
+	
+	text-align: center;
+}
+
+.tableform tr td a{
+	text-decoration: none;
+}
+
+.tableform tr td a:HOVER{
+	border: 1px black dashed;
+}
+
+.labname {
+	width: 150px;
+	height: 40px;
+	text-align: center;
+}
+
+
+
+.chooselab{
+	text-align:center;
+	padding-top:8px;
+	margin:2px;
+	background-color: #99A9FA;
+	width:400px;
+	height:35px;
+	font-size: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius:15px;
+	
+}
+
+.chooselab a{
+	color: white;
+	text-decoration: none;
+}
+
+.chooselab a:hover{
+	border: 1px black dashed;
+}
+
+.showteachers {
+	border-radius:15px;
+	background-color: #3F48CC;
+	padding:0px;
+	padding-left:50px;
+	padding-right:50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.showteachers a {
+	color:white;
+}
+
+.teacherlist{
+	text-align:left;
+	width:300px;
+	
+}
+
+.teacherlist a{
+	text-decoration: none;
+}
+
+.teacherlist a:hover{
+	border:1px black dashed;
+}
+
+.commentnum {
+	width:80px;
+}
+
+.commentnum a{
+	text-decoration: none;
+}
+
+.list {
+}
+
+.commentnum a:hover{
+	border:1px black dashed;
+}
+
+
+#headermenu {
+  BORDER: #ddd 1px solid;
+  BACKGROUND: url(images/menu_bg.gif) #fff repeat-x;
+  HEIGHT: 31px;
+  
+}
+
+#headermenu p{
+	margin-top: 7px; 
+	margin-left: 30px;
+	font-size: 15px;
+	font-weight: bolder;
+	font-style: inherit;
+}

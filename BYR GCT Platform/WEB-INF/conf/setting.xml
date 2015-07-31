@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><setting> 
+  	<baseinfo> 
+  		<forumName default="unnamed">北邮考研</forumName>
+		<forumLogo default="logo.gif">logo.gif</forumLogo>
+  		<website>localhost</website>
+  		<siteUrl>http://localhost</siteUrl>
+  		<footerMailAddr>adminMail</footerMailAddr>
+		<certCode/>
+  		<dateFormat default="yyyy-mm-dd">yyyy-mm-dd</dateFormat>
+  		<timezone default="8">8</timezone>
+  		<adminMailAddr>328345020@qq.com</adminMailAddr>
+  		<sysMailAddr>328345020@qq.com</sysMailAddr>
+  		<sysMailUser>wilight1</sysMailUser>
+  		<sysMailPasswd>admin</sysMailPasswd>
+  		<sysSmtpHost>smtp.qq.com</sysSmtpHost>
+	</baseinfo>
+
+  	<access>
+  		<registerType default="open"/>
+  		<reserveWords/>
+  		<userExpireDays default="0" min="0"/>
+  		<ipBanned/>
+  		<ipAllowed/>
+  		<ipAdminAllowed/>
+  	</access>
+
+  	<display>
+  		<defaultStyle default="default"/>
+  		<showStyleList default="no"/>
+  		<showSectionLink default="no"/>
+  		<tsExchange default="none">none</tsExchange>
+  		<showHotlinks/>
+  		<imageFile/>
+  		<imageLink/>
+  		<imageTitle/>
+  		<showUnion default="yes"/>
+  		<showOnlineUsers default="yes"/>
+  		<topicsPerPage default="20" max="50" min="5"/>
+  		<maxTopicPages default="50" min="0"/>
+  		<hotTopicPosts default="10" min="1"/>
+		<hotTopicVisits default="100" min="10"/>
+  		<postsPerPage default="10" max="50" min="1"/>
+  		<showAvatar default="yes"/>
+  		<showBrief default="no"/>
+  	</display>
+
+  	<seo>
+  		<appendTitle/>
+  		<keywords/>
+	  	<description/>
+  	</seo>
+  		  	  
+  	<functions> 
+  		<maxPostLength default="50" min="0"/>
+  		<maxAttachNum default="5" max="10" min="0"/>
+  		<allowAttachTypes>chm,pdf,zip,rar,tar,gz,jar,gif,jpg,jpeg,png,swf</allowAttachTypes>
+  		<maxAttachSize default="5000" min="100"/>
+  		<maxReplies default="2000" max="9999" min="10"/>
+  		<logKeepMonths default="3" max="99" min="0"/>
+  		<trashKeepMonths default="3" max="99" min="0"/>
+  		<headAdCode/>
+  		<footAdCode/>
+  		<footRemark/>
+  		<judgeOptions/>
+  		<mailEvents default="error,audit,report,version"/>
+	  	<RssStyle default="A"/>
+  		<topicsPerChannel default="15" max="100" min="5"/>
+		<RssSub default="yes"/>
+  	</functions>
+
+  	<credits> 
+  		<userInitValue default="0"/>
+  		<newTopic default="10" max="99" min="0"/>
+  		<newReply default="5" max="99" min="0"/>
+  		<bestReply default="20" max="99" min="0"/>
+  		<digestTopic default="20" max="99" min="0"/>
+  		<upload default="10" max="99" min="0"/>
+  		<download default="-0" max="0" min="-99"/>
+  	</credits>
+	
+  	<censor>
+  	</censor>
+
+  	<styles>1_default=默认风格
+1_cyan=青色主题
+1_black=黑色主题
+1_green=绿色主题
+1_red=红色主题
+	</styles>
+
+	<mycss>
+	</mycss>
+
+</setting>

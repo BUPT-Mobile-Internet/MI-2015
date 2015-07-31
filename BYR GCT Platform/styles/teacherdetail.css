@@ -1,0 +1,95 @@
+BODY {
+	FONT: 12px/1.6em Helvetica, Arial, sans-serif; 
+	COLOR: #000; 
+	BACKGROUND: #fff; 
+	text-align: center;
+	PADDING: 0px; 
+	MARGIN: 0px; 
+	min-width:900px;
+}
+
+.wrap {
+	MARGIN: auto;
+  	WIDTH: 98%;
+  	text-align: left;
+}
+
+.choosecollegemain {
+	background: url(images/teacher1.jpg);
+	background-size:cover;
+	text-align: center;
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.param {
+	height:40px;
+	width:100px;
+	text-align:center;
+}
+
+.value {
+	width:600px;
+	text-align:center;
+}
+
+.main {
+	background: url(images/background.jpg);
+	margin-top: 10px;
+}
+
+.shorttitle {
+	margin-top:50px;
+	width:180px;
+	height:31px;
+	background-color: #3F48CC;
+	color:white;
+	font-weight: bolder;
+	border-radius:15px;
+	padding-top:12px;
+	font-size: 21px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.detailtable {
+	color:#3F48CC;
+	font-weight:bolder;
+	padding-top:40px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.subbutton {
+	width:100px;
+	height:40px;
+	background-color: #3F48CC;
+	border-radius:10px;
+	color: white;
+	font-size: 15px;
+	font-weight: bolder;
+}
+
+#headermenu {
+  BORDER: #ddd 1px solid;
+  BACKGROUND: url(images/menu_bg.gif) #fff repeat-x;
+  HEIGHT: 31px;
+}
+
+#headermenu p{
+	margin-top: 7px; 
+	margin-left: 30px;
+	font-size: 15px;
+	font-weight: bolder;
+	font-style: inherit;
+}
+
+#textarea {
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left: auto;
+	margin-right: auto;
+}

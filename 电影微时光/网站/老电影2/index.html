@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>罗马假日</title>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+body{background:url(img/bg.gif);}
+a,img{border:none;}
+
+.zx_slider{position:relative;margin:40px auto 0 auto;width:1002px;height:400px;overflow:hidden;border-radius:5px;}
+.zx_slider .imgbox{width:3750px;height:310px;position:absolute;left:5px;top:4px;}
+.zx_slider .imgbox img{float:left;width:750px;height:310px;}
+.zx_slider .png{width:1002px;height:400px;left:0px;top:0px;position:absolute;background:url(img/slider_bg.png);_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/slider_bg.png");}
+.zx_slider .lbtn{cursor:pointer;width:45px;height:55px;position:absolute;left:0px;bottom:-3px;background:url(img/slider_l_btn.png);_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/slider_l_btn.png");}
+.zx_slider .rbtn{cursor:pointer;width:45px;height:55px;position:absolute;left:718px;bottom:-3px;background:url(img/slider_r_btn.png);_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/slider_r_btn.png");}
+.zx_slider .btnbox{width:750px;height:60px;position:absolute;left:30px;bottom:0px;}
+.zx_slider .btnbox a{cursor:pointer;display:inline-block;float:left;width:126px;height:54px;margin:0 0 0 10px;}
+.zx_slider .btnbox a img{position:relative;display:inline;width:120px;height:48px;float:left;border:3px solid #392101;border-radius:2px;}
+.zx_slider .btnbox a .img_hover{border:3px solid #e4471f;border-radius:2px;}
+.zx_slider .slider_p{overflow:hidden;width:220px;height:290px;position:absolute;right:15px;top:15px;}
+.zx_slider .slider_p h3{margin:20px 0 10px 0;font-size:20px;text-align:center;color:#faa629;}
+.zx_slider .slider_p p{line-height:26px;font-size:14px;color:#faa629;}
+.hi_btn{
+	width: 740px;
+	height: 330px;
+	position: absolute;
+	left: 3px;
+	top: 0px;
+	display: block;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="zx_slider">
+
+    <div class="imgbox">
+        <img alt="Danx" src="img/danx1.jpg" width="750" height="310" />
+        <img alt="Danx" src="img/danx2.jpg" width="750" height="310" />
+        <img alt="Danx" src="img/danx3.jpg" width="750" height="310" />
+        <img alt="Danx" src="img/danx4.jpg" width="750" height="310" />
+        <img alt="Danx" src="img/danx5.jpg" width="750" height="310" />
+    </div>
+	
+  <div class="png"></div>
+	
+    <a href="#" id="hi_btn0" class="hi_btn"></a>
+    <a href="#" id="hi_btn1" class="hi_btn"></a>
+    <a href="#" id="hi_btn2" class="hi_btn"></a>
+    <a href="#" id="hi_btn3" class="hi_btn"></a>
+    <a href="#" id="hi_btn4" class="hi_btn"></a>
+	
+    <div class="btnbox">
+        <a onmouseover="btn_m_over(0)"><img alt="Danx" id="btn_img0" class="thumb img_hover" src="img/danx1.jpg" /></a>
+        <a onmouseover="btn_m_over(1)"><img alt="Danx" id="btn_img1" class="thumb" src="img/danx2.jpg" /></a>
+        <a onmouseover="btn_m_over(2)"><img alt="Danx" id="btn_img2" class="thumb" src="img/danx3.jpg" /></a>
+        <a onmouseover="btn_m_over(3)"><img alt="Danx" id="btn_img3" class="thumb" src="img/danx4.jpg" /></a>
+        <a onmouseover="btn_m_over(4)"><img alt="Danx" id="btn_img4" class="thumb" src="img/danx5.jpg" /></a>
+    </div>
+	
+    <div class="lbtn"></div>
+    <div class="rbtn"></div>
+	
+    <div class="slider_p">
+	
+        <div id="slider_p0" class="slider_p_div">
+			<h3></h3>
+			<p>安妮公主作为王位继承人将出访欧洲的各大城市。消息一经传出便引起了极大的轰动。安妮公主欧洲之行的最后一站是罗马。待侍从们出去后，她偷偷越窗溜了出来。然而没逛多久，镇静剂的药效就产生了作用，使公主在广场附近喷水池边的一条长椅上迷迷糊糊地睡着了。</p>
+        </div>
+		
+        <div id="slider_p1" class="slider_p_div">
+			<h3></h3>
+			<p>与此同时，美国新闻社的穷记者乔·布莱德里恰好经过这里，乔刚刚从朋友那里打牌归来，以为这是一个在狂欢中被灌醉的少女，就租了一辆出租车想把她送回家。可是公主睡得特别沉，怎么也叫不醒，无奈之下，乔只好把她带回了自己的住所，并对她睡自己的床感到不满，于是将安妮公主放到了沙发上。</p>
+        </div>
+		
+        <div id="slider_p2" class="slider_p_div">
+			<h3></h3>
+			<p>乔赶忙给他的摄影师朋友欧文打电话，让他准备好。同时自己跟踪公主，在西班牙广场上佯装和她偶遇，便自告奋勇地要为公主做导游，骑着摩托车带着她游览罗马城，同时，欧文也驾驶着小汽车跟在他们后面，拍下了许多珍贵的镜头。</p>
+        </div>
+		
+        <div id="slider_p3" class="slider_p_div">
+			<h3></h3>
+			<p>一天过去了，公主终于要回宫了，可此时她和乔发现彼此间擦出了爱的火花，坠入了情网。怎奈公主毕竟是公主，平民终究是平民，两人只能依依惜别。</p>
+        </div>
+		
+        <div id="slider_p4" class="slider_p_div">
+			<h3></h3>
+			<p>乔的朋友欧文在和公主握手后决心抛弃功成名就之良机，将照片送予公主留念。最后，在深情的四目对望中，公主轻轻地对乔说了声再见……</p>
+        </div>
+		
+    </div>
+	
+</div><!--zx_slider end-->
+
+
+<script type="text/javascript">
+var slider_count=4;
+$(".slider_p_div").hide();
+$("#slider_p0").show();
+$(".hi_btn").hide();
+$("#hi_btn0").show();
+$(".img_hover").animate({bottom:'10px'});
+var slider_i=1;
+var m_over=true;
+
+function zx_slider(){
+	if(m_over){
+		if(slider_i<0){slider_i=slider_count;}
+		//p
+		$(".slider_p_div").hide();
+		$("#slider_p"+slider_i).show();
+		//p end
+		//hi_btn
+		$(".hi_btn").hide();
+		$("#hi_btn"+slider_i).show();
+		//hi_btn end
+		//btn
+		$(".btnbox img").stop(true,true);
+		$(".btnbox img").removeClass("img_hover");
+		$(".btnbox img").animate({bottom:'0px'},200);
+		$("#btn_img"+slider_i).addClass("img_hover");
+		$("#btn_img"+slider_i).animate({bottom:'10px'},200);
+		//btn end
+		$(".imgbox").stop();
+		$(".imgbox").animate({left:'-750'*slider_i+'px'});
+		if(slider_i<slider_count){
+			slider_i++;	
+		}else{
+			slider_i=0;
+		}
+	}
+}
+
+$(".lbtn").click(function(){
+	m_over=true;
+	if(slider_i==0){slider_i=slider_count-1}else{slider_i=slider_i-2;}
+	zx_slider();
+	m_over=false;
+});
+
+$(".rbtn").click(function(){
+	m_over=true;
+	zx_slider();
+	m_over=false;
+});
+
+function btn_m_over(btn_i){
+	if(slider_i-1!=btn_i){
+		m_over=true;
+		slider_i=btn_i;
+		zx_slider();
+		m_over=false;
+	}
+}
+
+zx_timer=setInterval("zx_slider();",5000); 
+$(".zx_slider").mouseover(function(){
+	m_over=false;
+});
+$(".zx_slider").mouseout(function(){
+	m_over=true;
+});
+</script>
+
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+<p align=center>
+<br />
+<br />
+<br /><strong>豆瓣影评</strong><br />
+<br />
+是一生一世还是一日的爱请能更足以诠释爱的真挚？<br />
+可能很多人会毫不犹豫的选择前者，<br />但电影《罗马假日》无疑呈现了那刹那芳华间一天里对爱最美的形态，<br />再难有一部电影能将如此短暂的爱情给人以洞彻心灵的动容，<br />
+一日也能是永恒挚爱！<br />光影留存住了那永远的绅士和公主。</p>
+
+</body>
+</html>

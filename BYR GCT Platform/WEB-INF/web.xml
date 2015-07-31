@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"  
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"  
+   version="2.4">
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+
+  <listener>
+     <listener-class>com.hongshee.ejforum.common.ContextListener</listener-class>
+  </listener>
+
+  <listener>
+     <listener-class>com.hongshee.ejforum.common.SessionListener</listener-class>
+  </listener>
+
+    <filter>
+    	<filter-name>RewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+        <init-param>
+        	<param-name>logLevel</param-name>
+            <param-value>WARN</param-value>
+        </init-param>
+    </filter>
+    
+    <filter-mapping>
+    	<filter-name>RewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>  
+
+    <servlet>
+	    <servlet-name>AjaxServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.AjaxServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/ajax</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>ImageServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.ImageServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/vcode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>AttachServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.AttachServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AttachServlet</servlet-name>
+        <url-pattern>/attach</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>RssServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.RssServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RssServlet</servlet-name>
+        <url-pattern>/rss</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+	    <servlet-name>OpmlServlet</servlet-name>
+	    <servlet-class>com.hongshee.ejforum.service.OpmlServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+    </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectCollege</servlet-name>
+    <servlet-class>net.wilight.web.controller.SelectCollege</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SelectTeacher</servlet-name>
+    <servlet-class>net.wilight.web.controller.SelectTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddLab</servlet-name>
+    <servlet-class>net.wilight.web.controller.AddLab</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddTeacher</servlet-name>
+    <servlet-class>net.wilight.web.controller.AddTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddComment</servlet-name>
+    <servlet-class>net.wilight.web.controller.AddComment</servlet-class>
+  </servlet>
+
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>OpmlServlet</servlet-name>
+        <url-pattern>/opml</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectCollege</servlet-name>
+    <url-pattern>/servlet/SelectCollege</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectTeacher</servlet-name>
+    <url-pattern>/servlet/SelectTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddLab</servlet-name>
+    <url-pattern>/servlet/AddLab</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddTeacher</servlet-name>
+    <url-pattern>/servlet/AddTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddComment</servlet-name>
+    <url-pattern>/servlet/AddComment</url-pattern>
+  </servlet-mapping>
+
+  	<error-page>
+  	    <exception-type>java.lang.Throwable</exception-type>
+    	<location>/error.jsp</location>
+  	</error-page>
+
+    <session-config>
+        <session-timeout>20</session-timeout>    <!-- 20 minutes -->
+    </session-config>
+
+</web-app>
